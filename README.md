@@ -14,4 +14,4 @@ Deptrac analyzes dependencies between different parts of your application (layer
 
 ## How to Use Deptrac with Spryker:
 1. Composer install deptrac: `composer require valantic-spryker-eco/deptrac --dev`
-2. Run `deptrac -c vendor/valantic-spryker-eco/deptrac.yaml` to analyze your project.
+2. Run `deptrac -c vendor/valantic-spryker-eco/deptrac/deptrac.yaml` to analyze your project.
