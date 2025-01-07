@@ -1,5 +1,5 @@
 {
-    "name": "valantic-spryker/deptrac",
+    "name": "valantic-spryker-eco/deptrac",
     "description": "deptrac rules for Zed, Yves, Glue, Client, Service",
     "type": "metapackage",
     "license": "MIT",
