@@ -1,7 +1,7 @@
 {
     "name": "valantic-spryker-eco/deptrac",
     "description": "deptrac rules for Zed, Yves, Glue, Client, Service",
-    "type": "metapackage",
+    "type": "library",
     "license": "MIT",
     "minimum-stability": "dev",
     "require": { "qossmic/deptrac": "^2.0"}
