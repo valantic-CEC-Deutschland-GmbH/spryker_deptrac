@@ -4,5 +4,5 @@
     "type": "metapackage",
     "license": "MIT",
     "minimum-stability": "dev",
-    "require-dev": { "qossmic/deptrac": "^2.0"}
+    "require": { "qossmic/deptrac": "^2.0"}
 }
