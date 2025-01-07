@@ -1,0 +1,45 @@
+deptrac: # https://docs.spryker.com/docs/dg/dev/backend-development/zed/business-layer/business-layer.html#business-layer-internal-structure
+    paths: [ ./src/Pyz/Zed, ./src/Pyz/Client, ./src/Pyz/Yves, ./src/Pyz/Glue, ./src/Pyz/Service ]
+
+    layers:
+        - name: Communication
+          collectors:
+              - type: bool
+                must: [ { type: glob, value: src/Pyz/Zed/*/Communication/**/*.php } ]
+                must_not: [ { type: glob, value: src/Pyz/Zed/*/Communication/Plugin/**/*.php } ]
+
+        - name: Business
+          collectors: [ { type: glob, value: src/Pyz/Zed/*/Business/**/*.php } ]
+
+        - name: Persistence
+          collectors: [ { type: glob, value: src/Pyz/Zed/*/Persistence/**/*.php } ]
+
+        - name: Presentation
+          collectors: [ { type: glob, value: src/Pyz/Zed/*/Presentation/**/*.php } ]
+
+        - name: Client
+          collectors: [ { type: glob, value: src/Pyz/Client/*/**/*.php } ]
+
+        - name: Yves
+          collectors: [ { type: glob, value: src/Pyz/Yves/*/**/*.php } ]
+
+        - name: Glue
+          collectors: [ { type: glob, value: src/Pyz/Glue/*/**/*.php } ]
+
+        - name: Service
+          collectors: [ { type: glob, value: src/Pyz/Service/*/**/*.php } ]
+
+        - name: ZedRest
+          collectors: [ { type: glob, value: src/Pyz/Zed/*/*.php } ]
+
+    ruleset:
+        Communication: [ Business, Client, Service, ZedRest ]
+        Business: [ Persistence, Client, Service, ZedRest ]
+        Persistence: [ ZedRest ]
+        Presentation: [ Business, Service, ZedRest ]
+        Zed: [ Communication, Business, Persistence, Presentation, ZedRest ]
+        Client: [ Service ]
+        Yves: [ Yves, Client, Service ]
+        Glue: [ Glue, Client, Service ]
+        Service: [ Service, Client ]
+    ignore_uncovered_internal_classes: true

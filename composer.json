@@ -1,0 +1,8 @@
+{
+    "name": "valantic-spryker/deptrac",
+    "description": "deptrac rules for Zed, Yves, Glue, Client, Service",
+    "type": "metapackage",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {}
+}
