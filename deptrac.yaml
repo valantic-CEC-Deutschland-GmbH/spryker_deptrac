@@ -42,4 +42,5 @@ deptrac: # https://docs.spryker.com/docs/dg/dev/backend-development/zed/business
     Yves: [ Yves, Client, Service ]
     Glue: [ Glue, Client, Service ]
     Service: [ Service, Client ]
+    ZedRest: [ Communication, ZedRest ]
   ignore_uncovered_internal_classes: true
